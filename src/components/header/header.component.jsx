@@ -2,25 +2,29 @@ import React from 'react';
 
 import './header.styles.scss';
 
-import Logo from '../logo/logo.component';
+import TitleLink from '../title-link/title-link.component';
 import OptionsLink from '../options-link/options-link.component';
 
 const Header = () => {
 
     return(
         <div className='header'>
-            <Logo />
-            <h1>First React Project</h1>
-            <h2>Fix my currently sad-looking website!!!</h2>
-            <OptionsLink>
-                ABOUT
-            </OptionsLink>
-            <OptionsLink>
-                CHALLENGES
-            </OptionsLink>
-            <OptionsLink>
-                CALENDAR
-            </OptionsLink>
+            <div className='title'>
+                <TitleLink to='/'>
+                    charleshunk.com
+                </TitleLink>
+            </div>
+            <div className='options'>
+                <OptionsLink to='/about'>
+                    ABOUT
+                </OptionsLink>
+                <OptionsLink to='/challenges'>
+                    CHALLENGES
+                </OptionsLink>
+                <OptionsLink to='/calendar'>
+                    CALENDAR
+                </OptionsLink>
+            </div>
         </div>
     );
 };

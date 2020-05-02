@@ -1,0 +1,30 @@
+.button-marker-pair {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-right: 30px;
+
+    .options-link-marker {
+        height: 3px;
+        width: 100%;
+        background-color: #0B50BF;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.5s ease-out;
+    }
+
+    .options-link-button {
+        cursor: pointer;
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+            color: #0B50BF;
+        }
+
+        &:hover + .options-link-marker {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}

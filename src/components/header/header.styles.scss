@@ -1,3 +1,25 @@
 .header {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
     border-bottom: solid;
+    border-bottom-width: thin;
+    margin-bottom: 25px;
+
+    .title {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .options {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
 }
