@@ -1,0 +1,19 @@
+.category-header-icon {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-image: url('../../images/swim-bike-run.png');
+    background-size: 398%;
+
+    &.swim {
+        background-position: -22px -14px;
+    }
+
+    &.bike {
+        background-position: -121px -14px;
+    }
+
+    &.run {
+        background-position: -220px -14px;
+    }
+}

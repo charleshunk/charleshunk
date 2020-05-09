@@ -7,7 +7,7 @@
     .options-link-marker {
         height: 3px;
         width: 100%;
-        background-color: #0B50BF;
+        background-color: rgb(97, 187, 223);
         visibility: hidden;
         opacity: 0;
         transition: visibility 0s, opacity 0.5s ease-out;
@@ -16,10 +16,10 @@
     .options-link-button {
         cursor: pointer;
         text-decoration: none;
-        color: black;
+        color: white;
 
         &:hover {
-            color: #0B50BF;
+            color: rgb(97, 187, 223);
         }
 
         &:hover + .options-link-marker {
