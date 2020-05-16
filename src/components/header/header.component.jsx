@@ -24,6 +24,9 @@ const Header = () => {
                 <OptionsLink to='/calendar'>
                     CALENDAR
                 </OptionsLink>
+                <OptionsLink to='/blog'>
+                    BLOG
+                </OptionsLink>
             </div>
         </div>
     );

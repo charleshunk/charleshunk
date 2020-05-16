@@ -24,7 +24,7 @@ const CategoryItem = ({ type }) => {
         <div className='category-item'>
             <div className={`background ${type}`}></div>
             <div className='content'>
-                <h1 className='title'>{`#${type}`}</h1>
+                <div className='title'>{`#${type}`}</div>
                 <span className='subtitle'>{subtitleItem(type)}</span>
             </div>
         </div>

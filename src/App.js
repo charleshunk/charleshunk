@@ -10,6 +10,7 @@ import MainPage from './pages/main/main.component';
 import AboutPage from './pages/about/about.component';
 import ChallengesPage from './pages/challenges/challenges.component';
 import CalendarPage from './pages/calendar/calendar.component';
+import BlogPage from './pages/blog/blog.component';
 
 import Header from './components/header/header.component';
 
@@ -23,6 +24,7 @@ function App() {
         <Route exact path='/about' component={AboutPage} />
         <Route exact path='/challenges' component={ChallengesPage} />
         <Route exact path='/calendar' component={CalendarPage} />
+        <Route exact path='/blog' component={BlogPage} />
       </Switch>
     </div>
   );

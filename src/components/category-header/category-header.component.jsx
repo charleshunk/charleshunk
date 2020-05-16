@@ -21,8 +21,8 @@ const CategoryHeader = ({ type }) => {
         <div className='category-header'>
             {
                 itemTypes(type).map(
-                    itemType => (
-                        <CategoryHeaderIcon type={itemType}/>
+                    (itemType, id) => (
+                        <CategoryHeaderIcon key={id} type={itemType}/>
                     )
                 )
             }
