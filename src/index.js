@@ -5,11 +5,15 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import BlogProvider from '../src/provider/blog/blog.provider';
 
 ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
+  <BlogProvider>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </BlogProvider>
+    ,
   document.getElementById('root')
 );
 

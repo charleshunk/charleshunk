@@ -5,8 +5,9 @@
     justify-content: space-between;
     border-bottom: solid;
     border-bottom-width: thin;
-    margin-bottom: 30px;
     background-color: #333;
+    position: fixed;
+    top: 0;
 
     .title {
         width: 50%;

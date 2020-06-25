@@ -4,7 +4,7 @@ import './calendar.styles.scss';
 
 const CalendarPage = () => {
     return(
-        <div>
+        <div className='calendar-page'>
             This is the Calendar page!
         </div>
     )

@@ -3,7 +3,7 @@ img {
     max-height: 100%;
 }
 
-.blog-post {
+.rendered-blog-post {
     overflow: hidden;
 
     .blog-post-header {
@@ -23,15 +23,29 @@ img {
     }
 
     .blog-post-body {
-        font-size: 25px;
+        font-size: 18px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        line-height: 175%;
 
         .paragraph {
             margin-bottom: 15px;
             text-align: left;
+            font-weight: lighter;
+        }
+
+        .ordered-list {
+            margin-bottom: 15px;
+            text-align: left;
+            font-weight: lighter;
+        }
+
+        .unordered-list {
+            margin-bottom: 15px;
+            text-align: left;
+            font-weight: lighter;
         }
 
         .embedded-asset {

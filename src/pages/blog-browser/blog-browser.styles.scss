@@ -1,0 +1,18 @@
+.blog-browser {
+    margin-top: 100px;
+    padding-left: 75px;
+    padding-right: 75px;
+    display: flex;
+    flex-direction: row;
+
+    .blog-left {
+        width: 60%;
+    }
+
+    .blog-right {
+        width: 40%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+}

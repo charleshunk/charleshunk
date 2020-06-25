@@ -38,6 +38,38 @@ const renderAsset = (node, id) => {
     )
 };
 
+const renderOrderedList = (node, id) => {
+    return(
+        <div key={id} className='ordered-list'>
+            <ol>
+                {
+                    node.content.map((subnode, id) => {
+                        return(
+                            <li key={id}>{subnode.content[0].content[0].value}</li>
+                        )
+                    })
+                }
+            </ol>
+        </div>
+    )
+};
+
+const renderUnorderedList = (node, id) => {
+    return(
+        <div key={id} className='unordered-list'>
+            <ul>
+                {
+                    node.content.map((subnode, id) => {
+                        return(
+                            <li key={id}>{subnode.content[0].content[0].value}</li>
+                        )
+                    })
+                }
+            </ul>
+        </div>
+    )
+};
+
 const renderContent = (contentArray) => {
     return(
         <div>
@@ -48,6 +80,10 @@ const renderContent = (contentArray) => {
                             return(renderParagraph(node, id))
                         case 'embedded-asset-block':
                             return(renderAsset(node, id))
+                        case 'ordered-list':
+                            return(renderOrderedList(node, id))
+                        case 'unordered-list':
+                            return(renderUnorderedList(node, id))
                         default:
                             return(<div key={id}></div>)
                     }
@@ -57,21 +93,25 @@ const renderContent = (contentArray) => {
     )
 };
 
-const RenderedBlogPost = ({ blogPost }) => {
+const RenderedBlogPost = ({ blogPosts, postId }) => {
+    
+    const blogPostToRender = blogPosts.filter
+        (blogPost => blogPost.urlTag === postId);
+
     return(
-        <div className='blog-post'>
+        <div className='rendered-blog-post'>
             <div className='blog-post-header'>
-                <h1>{blogPost.title}</h1>
-                <h2>{blogPost.subtitle}</h2>
+                <h1>{blogPostToRender[0].title}</h1>
+                <h2>{blogPostToRender[0].subtitle}</h2>
                 <div className='blog-post-header-image-container'>
-                    <img src={blogPost.headlineImage.fields.file.url}
-                        alt={blogPost.headlineImage.fields.title}
+                    <img src={blogPostToRender[0].headlineImage.fields.file.url}
+                        alt={blogPostToRender[0].headlineImage.fields.title}
                         className='blog-post-header-image'/>
                 </div>
             </div>
             <div className='blog-post-body'>
                 {
-                    renderContent(blogPost.body.content)
+                    renderContent(blogPostToRender[0].body.content)
                 }
             </div>
         </div>

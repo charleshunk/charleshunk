@@ -24,7 +24,7 @@ function App() {
         <Route exact path='/about' component={AboutPage} />
         <Route exact path='/challenges' component={ChallengesPage} />
         <Route exact path='/calendar' component={CalendarPage} />
-        <Route exact path='/blog' component={BlogPage} />
+        <Route path='/blog' component={BlogPage} />
       </Switch>
     </div>
   );

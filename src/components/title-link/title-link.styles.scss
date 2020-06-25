@@ -7,10 +7,15 @@
     .title {
         width: auto;
         font-size: 30px;
+        transition: color 0.25s ease-out;
         color: white;
         font-weight: bold;
-        cursor: pointer;
         text-decoration: none;
         text-align: left;
+    }
+
+    .title:hover {
+        color: rgb(97, 187, 223);
+        cursor: pointer;
     }
 }
