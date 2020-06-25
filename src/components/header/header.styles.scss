@@ -1,27 +1,36 @@
 .header {
-    height: 60px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: solid;
-    border-bottom-width: thin;
-    background-color: #333;
     position: fixed;
     top: 0;
+    width: 100%;
 
-    .title {
-        width: 50%;
-        height: 100%;
+    .actual-header {
+        height: 60px;
+        border-bottom: solid;
+        border-bottom-width: thin;
+        background-color: #333;
         display: flex;
-        align-items: center;
-        justify-content: flex-start;
+        justify-content: space-between;
+
+        .title {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .options {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
     }
 
-    .options {
-        width: 50%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
+    .read-blog-location {
+        height: 2px;
+        width: 0;
+        background-color: orangered;
     }
 }

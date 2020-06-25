@@ -1,11 +1,15 @@
 import React, { createContext, useState, useEffect } from 'react';
 
 export const BlogContext = createContext({
-    blogPosts: []
+    blogPosts: [],
+    positionBlog: 0,
+    progressBlog: () => {}
 });
 
 const BlogProvider = ({ children }) => {
     const [blogPosts, setBlogPosts] = useState([]);
+    const [positionBlog, setPositionBlog] = useState(0);
+    const progressBlog = (newPosition) => setPositionBlog(newPosition);
     
     const readBlogPosts = async () => {
         const contentful = require('contentful');
@@ -31,10 +35,10 @@ const BlogProvider = ({ children }) => {
             console.log('blogPosts have finally been loaded ...');
             console.log(blogPosts);
         }
-    });
+    }, [blogPosts]);
 
     return (<BlogContext.Provider
-    value={{ blogPosts }}
+    value={{ blogPosts, positionBlog, progressBlog }}
     >
         {children}
         </BlogContext.Provider>
