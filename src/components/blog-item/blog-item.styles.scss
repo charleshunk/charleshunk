@@ -1,14 +1,13 @@
 .blog-item {
     margin: 10px 0px;
-    width: 100%;
-    box-shadow: rgba(43, 43, 53, 0.1) 1px 2px 20px;
+    box-shadow: lightsteelblue 1px 2px 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     height: 200px;
     
     .blog-image {
-        width: 50%;
+        width: 40%;
         object-fit: contain;
 
         &:hover {
@@ -17,7 +16,7 @@
     }
 
     .blog-item-description {
-        width: 50%;
+        width: 60%;
         display: flex;
         flex-direction: column;
         align-items: center;

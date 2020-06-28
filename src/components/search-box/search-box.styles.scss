@@ -1,0 +1,26 @@
+.search-box {
+    background-color: rgb(222, 222, 228);
+    border-radius: 20px;
+    height: 40px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    .lupita {
+        height: 20px;
+        width: 20px;
+        color: rgb(126,126,126);
+        margin: 0px 10px 0px 15px;
+    }
+
+    .searchie {
+        height: 40px;
+        width: 75%;
+        border-style: hidden;
+        outline: none;
+        background-color: rgb(222, 222, 228);
+        cursor: text;
+    }
+}

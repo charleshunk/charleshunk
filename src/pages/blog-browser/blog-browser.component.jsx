@@ -26,6 +26,8 @@ const BlogBrowser = () => {
                 <BlogList list={filteredBlogPosts}/>
             </div>
             <div className='blog-right'>
+                <div className='search-title'>Search</div>
+                <div className='underline'></div>
                 <SearchBox handleChange={filterPosts}/>
             </div>
         </div>

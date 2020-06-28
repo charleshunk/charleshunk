@@ -1,3 +1,99 @@
 .calendar-page {
     margin-top: 100px;
+    height: 100%;
+    display: flex;
+
+    .left-half {
+        padding-left: 20px;
+        width: 60%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .year-name {
+            margin: 20px 0;
+        }
+
+        .central-calendar-block {
+            width: 80%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            .left-arrow {
+                margin: 0;
+                padding: 0;
+                height: 60px;
+                width: 40px;
+                font-size: 300%;
+                text-align: center;
+                cursor: pointer;
+            }
+
+            .actual-calendar {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+    
+                .month {
+                    box-sizing: border-box;
+                    height: 150px;
+                    width: 30%;
+                    margin: 2px;
+                    background-color: rgba(176, 196, 222, 0.5);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+    
+                    .month-name {
+                        margin-top: 10px;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            .right-arrow {
+                margin: 0;
+                padding: 0;
+                height: 60px;
+                width: 40px;
+                font-size: 300%;
+                text-align: center;
+                cursor: pointer;
+            }
+
+        }
+
+        .annual-pointer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin: 20px 0;
+            width: 15%;
+
+            .bubble {
+                margin: 0;
+                padding: 0;
+                background-color: rgb(73, 95, 124);
+                height: 15px;
+                width: 15px;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    .right-half {
+        padding-right: 20px;
+        width: 40%;
+        height: 100%;
+    }
+
 }
