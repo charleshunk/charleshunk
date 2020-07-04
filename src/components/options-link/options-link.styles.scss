@@ -1,8 +1,10 @@
 .button-marker-pair {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
+    position: relative;
     margin-right: 30px;
+    height: 100%;
 
     .options-link-marker {
         height: 3px;
@@ -11,6 +13,8 @@
         visibility: hidden;
         opacity: 0;
         transition: visibility 0s, opacity 0.5s ease-out;
+        position: absolute;
+        top: 64%;
     }
 
     .options-link-button {

@@ -6,6 +6,7 @@ import { BlogContext } from '../../provider/blog/blog.provider';
 
 import TitleLink from '../title-link/title-link.component';
 import OptionsLink from '../options-link/options-link.component';
+import ModeToggle from '../mode-toggle/mode-toggle.component';
 
 const Header = () => {
     
@@ -24,18 +25,22 @@ const Header = () => {
                     <OptionsLink to='/about'>
                         ABOUT
                     </OptionsLink>
-                    <OptionsLink to='/challenges'>
-                        CHALLENGES
-                    </OptionsLink>
                     <OptionsLink to='/calendar'>
                         CALENDAR
                     </OptionsLink>
                     <OptionsLink to='/blog'>
                         BLOG
                     </OptionsLink>
+                    <OptionsLink to='/challenges'>
+                        CHALLENGES
+                    </OptionsLink>
+                    <ModeToggle/>
                 </div>
             </div>
-            <div className='read-blog-location' style={{width: `${positionBlog}%`}}></div>
+            <div className='read-blog-location'>
+                <div className='read-blog-location-left' style={{width: `${positionBlog}%`}}></div>
+                <div className='read-blog-location-right' style={{width: `${100-positionBlog}%`}}></div>
+            </div>
         </div>
     );
 };

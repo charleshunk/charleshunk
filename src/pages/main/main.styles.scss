@@ -1,3 +1,96 @@
+img {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
 .main-page {
-    margin-top: 100px;
+    margin-top: 61px;
+    
+    .hero-image-main-container {
+        position: relative;
+
+        .image-cover-top {
+            background-color: rgb(219, 219, 185);
+            opacity: 0.3;
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            height: 37%;
+        }
+
+        .image-cover-bottom {
+            background-color: rgb(219, 219, 185);
+            opacity: 0.3;
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            height: 18%;
+        }
+
+        .image-cover-left {
+            background-color: rgb(219, 219, 185);
+            opacity: 0.3;
+            position: absolute;
+            left: 0px;
+            top: 37%;
+            width: 32%;
+            height: 45%;
+        }
+
+        .image-cover-right {
+            background-color: rgb(219, 219, 185);
+            opacity: 0.3;
+            position: absolute;
+            top: 37%;
+            right: 0px;
+            width: 52%;
+            height: 45%;
+        }
+
+        .image-cover-center {
+            background-color: transparent;
+            position: absolute;
+            top: 37%;
+            left: 32%;
+            width: 16%;
+            height: 45%;
+            border-style: solid;
+            border-width: thin;
+            border-color: orangered;
+        }
+
+    }
+
+    .welcome-banner {
+        margin-top: 0;
+        padding-top: 0;
+        width: 100%;
+        height: 300px;
+        background-color: #333;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-bottom-style: solid;
+        border-width: 3px;
+        border-color: white;
+
+        .welcome-to-pre {
+            font-size: 40px;
+            color: white;
+        }
+
+        .welcome-to-main {
+            font-size: 100px;
+            font-weight: bold;
+            color: white;
+        }
+    }
+
+    .main-footer {
+        height: 100px;
+        width: 100%;
+        background-color: #333;
+    }
 }

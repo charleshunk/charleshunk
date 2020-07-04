@@ -6,7 +6,7 @@ const SearchBox = ({ handleChange }) => {
     return(
         <div className='search-box'>
             <svg
-            class='lupita'
+            className='lupita'
             width='15'
             height='14'
             viewBox='0 0 15 14'

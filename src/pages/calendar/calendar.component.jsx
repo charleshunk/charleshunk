@@ -5,6 +5,8 @@ import './calendar.styles.scss';
 import CALENDAR_DATA from './calendar.data';
 import RACE_DATA from './race.data';
 
+import worldMap from '../../images/world-map.png';
+
 const bubble = ['BEFORE','2017','2018','2019','2020'];
 
 const CalendarPage = () => {
@@ -17,7 +19,7 @@ const CalendarPage = () => {
                     <div className='actual-calendar'>
                         {
                             CALENDAR_DATA.map((month, id) => (
-                                <div className='month' id={id}>
+                                <div className='month' key={id}>
                                     <h4 className='month-name'>
                                         {month.month}
                                     </h4>
@@ -30,12 +32,16 @@ const CalendarPage = () => {
                 <div className='annual-pointer'>
                     {
                         bubble.map((year, id) => (
-                            <div className='bubble' id={id}></div>
+                            <div className='bubble' key={id}></div>
                         ))
                     }
                 </div>
             </div>
             <div className='right-half'>
+                <div className='world-map-container'>
+                    <img className='world-map' src={worldMap} alt='World Map'/>
+                    <div className='race-location'></div>
+                </div>
                 <div className='race-description'>
 
                 </div>
