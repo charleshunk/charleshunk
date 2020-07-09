@@ -1,16 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import './footer.styles.scss';
 
+import { ToggleContext } from '../../provider/toggle/toggle.provider';
+
 import LogoHover from '../logo-hover/logo-hover.component';
 
-import instaLogo from '../../images/insta-logo-2.png';
-import instaLogoAlt from '../../images/insta-logo-3.png';
-import stravaLogo from '../../images/strava-logo-2.png';
-import stravaLogoAlt from '../../images/strava-logo-3.png';
+import instaLogoWhite from '../../images/insta-logo-2.png';
+import instaLogoBlue from '../../images/insta-logo-3.png';
+import instaLogoGray from '../../images/insta-logo-4.png';
+import instaLogoOrangered from '../../images/insta-logo-5.png';
+import stravaLogoWhite from '../../images/strava-logo-2.png';
+import stravaLogoBlue from '../../images/strava-logo-3.png';
+import stravaLogoGray from '../../images/strava-logo-4.png';
+import stravaLogoOrangered from '../../images/strava-logo-5.png';
 import heartIcon from '../../images/heart-icon.png';
-import scrollUpCaret from '../../images/scroll-up-caret-2.png';
-import scrollUpCaretAlt from '../../images/scroll-up-caret-3.png';
 
 const Footer = () => {
     
@@ -19,8 +23,21 @@ const Footer = () => {
         window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
     };
     
+    const { colourScheme } = useContext(ToggleContext);
+    
+    let styleFooter = {
+        backgroundColor: colourScheme ? '#FFC40C' : '#333',
+        color: colourScheme ? '#333' : 'white'
+    };
+    
+    let instaLogo = colourScheme ? instaLogoGray : instaLogoWhite;
+    let instaLogoAlt = colourScheme ? instaLogoOrangered : instaLogoBlue;
+
+    let stravaLogo = colourScheme ? stravaLogoGray : stravaLogoWhite;
+    let stravaLogoAlt = colourScheme ? stravaLogoOrangered : stravaLogoBlue;
+
     return(
-        <div className='footer'>
+        <div className='footer' style={styleFooter}>
             <div className='contact-me'>
                 <span className='follow-me'>FOLLOW ME</span>
                 <div className='footer-logos'>

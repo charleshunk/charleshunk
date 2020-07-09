@@ -1,0 +1,25 @@
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+
+import './title-link.styles.scss';
+
+import { ToggleContext } from '../../provider/toggle/toggle.provider';
+
+const TitleLink = ({ to, children }) => {
+    
+    const { colourScheme } = useContext(ToggleContext);
+
+    let styleTitle = {
+        color: colourScheme ? '#333' : 'white'
+    };
+
+    return(
+        <div className='title-link'>
+            <Link to={to} className='actual-title' style={styleTitle}>
+                { children }
+            </Link>
+        </div>
+    )
+};
+
+export default TitleLink;

@@ -1,24 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import './section-intro.styles.scss';
 
+import { ToggleContext } from '../../provider/toggle/toggle.provider';
+
 const SectionIntro = ({ imageUrl, text, title }) => {
+
+    const { colourScheme } = useContext(ToggleContext);
+
     return(
-        <div className='section-intro'>
-            <img
-                className='section-image'
-                src={imageUrl}
-                alt=''
-            ></img>
-            <div className='section-description'>
-                <div className='section-desc-text'>
-                    { text }
-                </div><br/>
-                <div className='section-desc-title'>
-                    {`check out the ${title} section`}
-                </div>
-            </div>
-        </div>
+        <main className='section-intro'>
+
+        </main>
     );
 };
 

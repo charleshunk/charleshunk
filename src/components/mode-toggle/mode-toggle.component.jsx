@@ -1,22 +1,25 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useContext } from 'react';
 
 import './mode-toggle.styles.scss';
+
+import { ToggleContext } from '../../provider/toggle/toggle.provider';
 
 import toggleMoon from '../../images/toggle-moon.png';
 import toggleSun from '../../images/toggle-sun.png';
 
 const ModeToggle = () => {
 
-    const [isChecked, setChecked] = useState(false);
+    const { colourScheme, toggleScheme } = useContext(ToggleContext);
+
     const [isHighlighted, setHighlighted] = useState(false);
 
     const highlightedClass = useRef('');
     const firstTime = useRef(true);
 
-    const checkedClass = isChecked ? 'toggled' : '';
+    const checkedClass = colourScheme ? 'toggled' : '';
 
     const toggleThumb = () => {
-        setChecked(!isChecked);
+        toggleScheme();
         highlightedClass.current = 'highlighted';
     };
 
@@ -33,7 +36,7 @@ const ModeToggle = () => {
             firstTime.current = false;
         }
 
-    }, [isChecked]);
+    }, [colourScheme]);
 
     return(
         <div className='mode-toggle'>

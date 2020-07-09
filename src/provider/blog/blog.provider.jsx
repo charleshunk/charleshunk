@@ -38,9 +38,8 @@ const BlogProvider = ({ children }) => {
     }, [blogPosts]);
 
     return (<BlogContext.Provider
-    value={{ blogPosts, positionBlog, progressBlog }}
-    >
-        {children}
+                value={{ blogPosts, positionBlog, progressBlog }}>
+                {children}
         </BlogContext.Provider>
     );
 };

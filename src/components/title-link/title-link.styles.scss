@@ -1,22 +1,45 @@
 .title-link {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     width: 100%;
+    height: 100%;
     margin-left: 30px;
 
-    .actual-title {
+    .title-container {
+        position: relative;
+        width: 100%;
+        height: 31px;
         font-size: 30px;
-        transition: color 0.25s ease-out;
-        color: white;
         font-weight: bold;
-        text-decoration: none;
-        text-align: left;
         margin-left: 0;
         margin-right: auto;
+
+        .actual-title {
+            position: absolute;
+            text-decoration: none;
+            left: 0;
+            top: 0;
+            z-index: 10;
+            opacity: 1;
+            cursor: pointer;
+            transition: all 0.5s ease-out;
+
+            &:hover {
+                opacity: 0;
+            }
+
+        }
+
+        .actual-title-alternative {
+            position: absolute;
+            text-decoration: none;
+            left: 0;
+            top: 0;
+            z-index: 1;
+            cursor: pointer;            
+        }
+
     }
 
-    .actual-title:hover {
-        color: rgb(97, 187, 223);
-        cursor: pointer;
-    }
 }

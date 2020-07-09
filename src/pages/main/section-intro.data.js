@@ -27,4 +27,5 @@ const SECTION_INTRO_DATA = [
     },
 ];
 
-export default SECTION_INTRO_DATA;
+
+export { SECTION_INTRO_DATA };

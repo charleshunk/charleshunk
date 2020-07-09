@@ -6,13 +6,16 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import BlogProvider from '../src/provider/blog/blog.provider';
+import ToggleProvider from '../src/provider/toggle/toggle.provider';
 
 ReactDOM.render(
-  <BlogProvider>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </BlogProvider>
+  <ToggleProvider>
+    <BlogProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </BlogProvider>
+  </ToggleProvider>
     ,
   document.getElementById('root')
 );
