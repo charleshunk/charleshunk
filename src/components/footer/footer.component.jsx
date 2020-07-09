@@ -27,7 +27,8 @@ const Footer = () => {
     
     let styleFooter = {
         backgroundColor: colourScheme ? '#FFC40C' : '#333',
-        color: colourScheme ? '#333' : 'white'
+        color: colourScheme ? '#333' : 'white',
+        borderTopColor: colourScheme ? '#333' : 'white'
     };
     
     let instaLogo = colourScheme ? instaLogoGray : instaLogoWhite;

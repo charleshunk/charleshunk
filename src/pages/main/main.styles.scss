@@ -128,19 +128,22 @@
             .section-link {
                 height: 40px;
                 width: 160px;
-                background-color: #61BBDF;
                 border: solid;
                 border-width: 2px;
-                border-color: white;
-                opacity: 1;
                 text-decoration: none;
-                color: white;
                 font-weight: bold;
+                border-color: white;
+                color: white;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 margin-right: 20px;
                 opacity: 0.5;
+                transition: all 0.5s ease-out;
+
+                &:hover {
+                    opacity: 1;
+                }
             }
         }
     }
@@ -154,6 +157,95 @@
     }
 
     .section-block {
-        height: 400px;
+        height: 500px;
+        display: flex;
+        justify-content: space-between;
+        transition: all 0.5s ease-out;
+
+        .section-desc-container {
+            width: auto;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+
+            .section-desc {
+                text-align: left;
+                transition: all 0.5s ease-out;
+                margin-left: 20px;
+                max-width: 450px;
+            }
+
+            .cholula {
+                max-width: 120px;
+                margin-left: 20px;
+                margin-bottom: 20px;
+            }
+
+            .section-link {
+                height: 40px;
+                width: 160px;
+                border: solid;
+                border-width: 2px;
+                text-decoration: none;
+                font-weight: bold;
+                border-color: white;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 20px;
+                opacity: 0.5;
+                transition: all 0.5s ease-out;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }        
+        
+        .section-image {
+            position: relative;
+            min-width: 550px;
+            height: 100%;
+
+            .triangle {
+                position: absolute;
+                left: 0;
+                width: 0;
+                height: 0;
+                border-bottom-style: solid;
+                border-bottom-width: 500px;
+                border-right: 200px solid transparent;
+                z-index: 10;
+                transition: all 0.5s ease-out;
+            }
+
+            .over-section-image {
+                position: absolute;
+                top: 0;
+                background-color: black;
+                opacity: 0.25;
+                width: 100%;
+                height: 100%;
+                z-index: 5;
+            }
+        }
+
+        .image-one {
+            background-image: url(../../images/IM-norway-run-1.JPG);
+            background-size: 130%;
+            background-position-x: 0%;
+            background-position-y: 33%;
+            background-repeat: no-repeat;
+        }
+
+        .image-two {
+            background-image: url(../../images/5150-zurich-swim-2.JPG);
+            background-size: 100%;
+            background-position-y: 13%;
+            background-repeat: no-repeat;
+        }
     }
 }

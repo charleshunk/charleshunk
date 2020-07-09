@@ -7,18 +7,26 @@ import { ToggleContext } from '../../provider/toggle/toggle.provider';
 import { Link } from 'react-router-dom';
 
 import { SECTION_INTRO_DATA } from './section-intro.data';
+import cholulaSauce from '../../images/cholula-sauce.png';
 
 const MainPage = () => {
 
     const { colourScheme } = useContext(ToggleContext);
 
-    let styleWelcome = {
-        backgroundColor: colourScheme ? '#FFC40C' : '#333',
-        borderColor: colourScheme ? '#333' : 'white'
+    const styleWelcome = {
+        backgroundColor: colourScheme ? '#FFC40C' : '#333' 
     };
     
-    let styleWelcomeTwo = {
+    const styleWelcomeTwo = {
         color: colourScheme ? '#333' : 'white'
+    };
+
+    const styleButton = {
+        backgroundColor: colourScheme ? 'orangered' : '#61BBDF',
+    };
+
+    const styleTriangle = {
+        borderBottomColor: colourScheme ? '#FFC40C' : '#333'
     };
 
     return(
@@ -41,13 +49,24 @@ const MainPage = () => {
                         <h1 className='section-desc'>
                             {SECTION_INTRO_DATA[0].text}
                         </h1>
-                        <Link className='section-link' to='/about'>
+                        <Link className='section-link' to='/about' style={styleButton}>
                             LEARN MORE
                         </Link>
                     </div>
                 </div>
-                <div className='section-block'>
-
+                <div className='section-block' style={styleWelcome}>
+                    <div className='section-desc-container'>
+                        <h1 className='section-desc' style={styleWelcomeTwo}>
+                            {SECTION_INTRO_DATA[1].text}
+                        </h1>
+                        <Link className='section-link' to='/calendar' style={styleButton}>
+                            LEARN MORE
+                        </Link>
+                    </div>
+                    <div className='section-image image-one'>
+                        <div className='triangle' style={styleTriangle}></div>
+                        <div className='over-section-image'></div>
+                    </div>
                 </div>
                 <div className='parallax parallax-two'>
                     <div className='over-parallax'></div>
@@ -55,13 +74,25 @@ const MainPage = () => {
                         <h1 className='section-desc'>
                             {SECTION_INTRO_DATA[2].text}
                         </h1>
-                        <Link className='section-link' to='/blog'>
+                        <Link className='section-link' to='/blog' style={styleButton}>
                             LEARN MORE
                         </Link>                        
                     </div>
                 </div>
-                <div className='section-block'>
-
+                <div className='section-block' style={styleWelcome}>
+                <div className='section-desc-container'>
+                        <h1 className='section-desc' style={styleWelcomeTwo}>
+                            {SECTION_INTRO_DATA[3].text}
+                        </h1>
+                        <img src={cholulaSauce} className='cholula'></img>
+                        <Link className='section-link' to='/challenges' style={styleButton}>
+                            LEARN MORE
+                        </Link>
+                    </div>
+                    <div className='section-image image-two'>
+                        <div className='triangle' style={styleTriangle}></div>
+                        <div className='over-section-image'></div>
+                    </div>
                 </div>
             </div>
         </div>

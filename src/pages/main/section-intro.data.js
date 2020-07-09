@@ -22,7 +22,7 @@ const SECTION_INTRO_DATA = [
     },
     {
         imageUrl: challengesImage,
-        text: 'because racing aint racing without a little cholula sauce in our lives...',
+        text: '\'cause racing ain\'t racing without a little',
         title: 'challenges'
     },
 ];
